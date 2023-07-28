@@ -38,11 +38,16 @@ html {
 
 .inner-page .big-main-pattern {
   position: relative;
-  padding-top: 160px;
+  padding-top: 130px;
 }
 @media (max-width: 991px) {
   .inner-page .big-main-pattern {
-    padding-top: 80px;
+    padding-top: 117px;
+  }
+}
+@media (max-width: 767px) {
+  .inner-page .big-main-pattern {
+    padding-top: 70px;
   }
 }
 .inner-page .big-main-pattern:after {
@@ -1711,7 +1716,12 @@ html[dir=ltr] .more-link .icon {
   padding-top: 0;
 }
 .about-main-section .about-cont {
-  padding: 0;
+  padding: 60px 0 175px;
+}
+@media (max-width: 767px) {
+  .about-main-section .about-cont {
+    padding: 40px 0 50px;
+  }
 }
 .about-main-section .about-text {
   padding: 0;
