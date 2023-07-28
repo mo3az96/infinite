@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  lazyLoad();
   /* ************************************ Fixed Header ************************************ */
   if ($(this).scrollTop() >= 100) {
     $("header").addClass("fixed");
@@ -44,31 +45,33 @@ $(document).ready(function () {
     },
   });
   /* ~~~~~~~~~~~~~~~ States Counter ~~~~~~~~~~~~~~~ */
-  var a = 0;
-  $(window).scroll(function () {
-    if (
-      a == 0 &&
-      $(this).scrollTop() >= $(".statistics-section").offset().top - 500
-    ) {
-      $(".statistic-value span").each(function () {
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              duration: 1000,
-              easing: "swing",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
+  if ($(".statistics-section").length) {
+    var a = 0;
+    $(window).scroll(function () {
+      if (
+        a == 0 &&
+        $(this).scrollTop() >= $(".statistics-section").offset().top - 500
+      ) {
+        $(".statistic-value span").each(function () {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
               },
-            }
-          );
-      });
-      a++;
-    }
-  });
+              {
+                duration: 1000,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+                },
+              }
+            );
+        });
+        a++;
+      }
+    });
+  }
   /************************************ Projects Sliders ************************************/
   var allProjectsSwiper = new Swiper(".all-slider .swiper", {
     loop: true,
@@ -102,10 +105,10 @@ $(document).ready(function () {
   }
 
   /************************************ Clients Slider ************************************/
-  var clientsSwiper = new Swiper(".clients-cont .swiper", {
+  var clientsSwiper = new Swiper(".clients-slider .swiper", {
     loop: true,
     pagination: {
-      el: ".clients-cont .swiper-pagination",
+      el: ".clients-slider .swiper-pagination",
       clickable: true,
     },
     breakpoints: {
@@ -128,6 +131,37 @@ $(document).ready(function () {
         slidesPerView: 4,
         spaceBetween: 26,
         allowTouchMove: false,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  /************************************ Team Slider ************************************/
+  var teamSwiper = new Swiper(".team-slider .swiper", {
+    loop: true,
+    pagination: {
+      el: ".team-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
     on: {
