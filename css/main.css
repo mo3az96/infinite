@@ -865,12 +865,28 @@ html[dir=ltr] .main-slide .slide-link .icon {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
+  position: relative;
 }
 @media (max-width: 991px) {
   .services-list {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+}
+.services-list:after {
+  content: "";
+  position: absolute;
+  inset-inline-start: -60px;
+  top: -50px;
+  z-index: 1;
+  width: 140px;
+  height: 116px;
+  background-color: transparent;
+  border: 8px solid #e8b591;
+  display: block;
+}
+.servicesArc-cont .services-list {
+  margin: 0;
 }
 
 .service-item {
@@ -971,6 +987,9 @@ html[dir=ltr] .main-slide .slide-link .icon {
   background-color: #e8b591;
   border-radius: 3px;
   display: block;
+}
+.servicesArc-cont .service-item {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2509803922);
 }
 .service-item:hover {
   border-color: #e8b591;
@@ -1625,21 +1644,6 @@ html[dir=ltr] .more-link .icon {
 .services-cont {
   padding: 60px 0;
 }
-.services-cont .services-list {
-  position: relative;
-}
-.services-cont .services-list:after {
-  content: "";
-  position: absolute;
-  inset-inline-start: -60px;
-  top: -50px;
-  z-index: 1;
-  width: 140px;
-  height: 116px;
-  background-color: transparent;
-  border: 8px solid #e8b591;
-  display: block;
-}
 
 /*projects*/
 .projects-section {
@@ -1975,6 +1979,27 @@ html[dir=ltr] .more-link .icon {
   font-size: 14px;
   font-weight: 300;
   color: #e8b591;
+}
+
+.servicesArc-section {
+  background-color: #1a1a1c;
+}
+
+.servicesArc-cont {
+  padding: 27px 0 80px;
+}
+@media (max-width: 767px) {
+  .servicesArc-cont {
+    padding: 20px 0 40px;
+  }
+}
+.servicesArc-cont .sec-head {
+  margin-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .servicesArc-cont .sec-head {
+    margin-bottom: 70px;
+  }
 }
 
 .map-cont {
