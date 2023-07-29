@@ -170,4 +170,49 @@ $(document).ready(function () {
       },
     },
   });
+  /************************************ Testimonials Slider ************************************/
+  var testimonialsSwiper = new Swiper(".testimonials-slider .swiper", {
+    loop: true,
+    pagination: {
+      el: ".testimonials-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  /************************************ Services Slider ************************************/
+  var servicesSwiper = new Swiper(".services-slider .swiper", {
+    loop: true,
+    pagination: {
+      el: ".services-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
 });
