@@ -965,18 +965,26 @@ html[dir=ltr] .main-slide .slide-link .icon {
 }
 .service-item .service-name {
   display: -webkit-box;
-  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 25px;
   font-weight: 700;
   color: #cacaca;
   margin: 0 0 30px;
+}
+html[dir=rtl] .service-item .service-name {
+  -webkit-line-clamp: 1;
+}
+html[dir=ltr] .service-item .service-name {
+  -webkit-line-clamp: 2;
+  height: 92px;
 }
 @media (max-width: 767px) {
   .service-item .service-name {
     font-size: 22px;
     margin: 0 0 20px;
+  }
+  html[dir=ltr] .service-item .service-name {
+    height: auto;
   }
 }
 .service-item .name-link {
@@ -991,9 +999,7 @@ html[dir=ltr] .main-slide .slide-link .icon {
 }
 .service-item .service-desc {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  height: 70px;
   overflow: hidden;
   font-size: 16px;
   color: #cacaca;
@@ -1002,10 +1008,23 @@ html[dir=ltr] .main-slide .slide-link .icon {
   padding: 0 5px;
   margin: 0 0 30px;
 }
+html[dir=rtl] .service-item .service-desc {
+  -webkit-line-clamp: 2;
+  height: 70px;
+}
+html[dir=ltr] .service-item .service-desc {
+  -webkit-line-clamp: 3;
+  height: 105px;
+}
 @media (max-width: 767px) {
   .service-item .service-desc {
     font-size: 14px;
     margin: 0 0 20px;
+  }
+  html[dir=rtl] .service-item .service-desc {
+    height: auto;
+  }
+  html[dir=ltr] .service-item .service-desc {
     height: auto;
   }
 }
@@ -1489,9 +1508,14 @@ header.fixed .logo {
 /*sec head*/
 .sec-head {
   width: 100%;
-  max-width: 690px;
   text-align: center;
   margin: 0 auto 40px;
+}
+html[dir=rtl] .sec-head {
+  max-width: 690px;
+}
+html[dir=ltr] .sec-head {
+  max-width: 720px;
 }
 .about-cont .sec-head {
   max-width: none;
@@ -1524,6 +1548,11 @@ header.fixed .logo {
 @media (max-width: 991px) {
   .sec-head {
     margin: 0 0 25px;
+  }
+  html[dir=rtl] .sec-head {
+    max-width: 100%;
+  }
+  html[dir=ltr] .sec-head {
     max-width: 100%;
   }
 }
@@ -1534,6 +1563,7 @@ header.fixed .logo {
   color: #e8b591;
   line-height: 1.8333;
   margin: 0;
+  text-transform: uppercase;
 }
 @media (max-width: 991px) {
   .sec-title {
@@ -3000,12 +3030,7 @@ html[dir=ltr] .side-share-card .share-method ~ .share-method {
 }
 .side-share-card .share-method i {
   font-size: 14px;
-}
-html[dir=rtl] .side-share-card .share-method i {
   margin-right: 5px;
-}
-html[dir=ltr] .side-share-card .share-method i {
-  margin-left: 5px;
 }
 .side-share-card .share-method:hover {
   background-color: #e8b591;
