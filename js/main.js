@@ -215,4 +215,15 @@ $(document).ready(function () {
       },
     },
   });
+  /************************************ mixitup ************************************/
+  if ($("#project-cats").length) {
+    var mixer = mixitup("#project-cats", {
+      animation: {
+        duration: 0,
+        nudge: false,
+        reverseOut: false,
+        effects: "scale(0.01)",
+      },
+    });
+  }
 });
