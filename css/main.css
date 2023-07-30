@@ -685,11 +685,21 @@ html[dir=ltr] .form-submit .icon {
   }
 }
 .main-slide .welcome {
-  font-size: 16px;
   color: #e8b591;
   font-weight: 300;
   margin: 0;
   line-height: 1.875;
+}
+html[dir=rtl] .main-slide .welcome {
+  font-size: 16px;
+}
+html[dir=ltr] .main-slide .welcome {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .main-slide .welcome {
+    font-size: 12px;
+  }
 }
 .main-slide .welcome::after {
   content: "";
@@ -712,27 +722,53 @@ html[dir=ltr] .form-submit .icon {
   line-height: 1.732;
   margin: 0 0 30px;
 }
+html[dir=rtl] .main-slide .slide-title {
+  font-size: 36px;
+}
+html[dir=ltr] .main-slide .slide-title {
+  font-size: 30px;
+}
 @media (max-width: 991px) {
   .main-slide .slide-title {
-    font-size: 24px;
     margin: 0 0 15px;
+  }
+  html[dir=rtl] .main-slide .slide-title {
+    font-size: 24px;
+  }
+  html[dir=ltr] .main-slide .slide-title {
+    font-size: 18px;
   }
 }
 .main-slide .slide-link {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 16px;
   color: #cacaca;
   fill: #cacaca;
   stroke: #cacaca;
   transition: all 0.3s ease-in-out;
+}
+html[dir=rtl] .main-slide .slide-link {
+  font-size: 16px;
+}
+html[dir=ltr] .main-slide .slide-link {
+  font-size: 14px;
 }
 .main-slide .slide-link .text {
   margin-inline-end: 15px;
 }
 html[dir=ltr] .main-slide .slide-link .icon {
   transform: scaleX(-1);
+}
+@media (max-width: 767px) {
+  .main-slide .slide-link .icon {
+    width: 30px;
+    height: 20px;
+  }
+  .main-slide .slide-link .icon svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 .main-slide .slide-link .svgArrow {
   stroke: #707070;
