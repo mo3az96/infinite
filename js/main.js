@@ -226,4 +226,39 @@ $(document).ready(function () {
       },
     });
   }
+  /************************************ Project Imgs ************************************/
+  var ProjectImgSwiper = new Swiper(".project-imgs-slider .swiper", {
+    loop: true,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    pagination: {
+      el: ".project-imgs-slider .swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
+  /************************************ Project Imgs ************************************/
+  $(".copy-btn").click(function () {
+    var textToCopy = $(this).data("code");
+    var tempTextarea = $("<textarea>");
+    var confirmEle = $(
+      `<span class='copied'>${
+        document.dir == "rtl" ? "تم النسخ" : "copied"
+      }</span>`
+    );
+    $("body").append(tempTextarea);
+    $(confirmEle).insertAfter(".link-holder .text");
+    tempTextarea.val(textToCopy).select();
+    document.execCommand("copy");
+    tempTextarea.remove();
+    setTimeout(function () {
+      confirmEle.remove();
+    }, 2000);
+  });
 });
