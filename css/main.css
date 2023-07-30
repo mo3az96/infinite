@@ -2008,25 +2008,40 @@ html[dir=ltr] .more-link .icon {
 }
 .team-title::before {
   content: attr(data-title);
-  font-size: 235px;
   font-weight: 500;
   color: #1a1a1c;
+  text-transform: uppercase;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #37373a;
   line-height: 1.080851;
 }
+html[dir=rtl] .team-title::before {
+  font-size: 235px;
+}
+html[dir=ltr] .team-title::before {
+  font-size: 230px;
+}
 @media (max-width: 1199px) {
-  .team-title::before {
+  html[dir=rtl] .team-title::before {
     font-size: 170px;
+  }
+  html[dir=ltr] .team-title::before {
+    font-size: 160px;
   }
 }
 @media (max-width: 991px) {
-  .team-title::before {
+  html[dir=rtl] .team-title::before {
     font-size: 130px;
+  }
+  html[dir=ltr] .team-title::before {
+    font-size: 120px;
   }
 }
 @media (max-width: 767px) {
-  .team-title::before {
+  html[dir=rtl] .team-title::before {
+    font-size: 17.5vw;
+  }
+  html[dir=ltr] .team-title::before {
     font-size: 17.5vw;
   }
 }
