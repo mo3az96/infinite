@@ -914,6 +914,11 @@ html[dir=ltr] .main-slide .slide-link .icon {
   border: 8px solid #e8b591;
   display: block;
 }
+@media (max-width: 991px) {
+  .services-list:after {
+    display: none;
+  }
+}
 .servicesArc-cont .services-list {
   margin: 0;
 }
