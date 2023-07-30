@@ -40,18 +40,18 @@ body {
   background-color: #1a1a1c;
   color: #cacaca;
 }
-body ::-webkit-scrollbar {
-  background-color: #1a1a1c;
-  width: 7px;
-  height: 5px;
-}
-body ::-webkit-scrollbar-thumb {
-  background-color: #e8b591;
-}
 
 html {
   scrollbar-width: thin;
   scrollbar-color: #e8b591 #1a1a1c;
+}
+html ::-webkit-scrollbar {
+  background-color: #1a1a1c;
+  width: 7px;
+  height: 5px;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #e8b591;
 }
 
 .inner-page .big-main-pattern {
@@ -1055,7 +1055,7 @@ html[dir=ltr] .main-slide .slide-link .icon {
 @media (max-width: 767px) {
   .home-project .img-holder {
     padding: 0;
-    height: 160px;
+    height: 300px;
   }
 }
 .home-project .img-holder img {
@@ -1081,10 +1081,6 @@ html[dir=ltr] .main-slide .slide-link .icon {
   .home-project .home-project-text {
     visibility: visible;
     opacity: 1;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
   }
 }
 .home-project .text-cont {
@@ -1101,13 +1097,11 @@ html[dir=ltr] .main-slide .slide-link .icon {
 }
 @media (max-width: 767px) {
   .home-project .text-cont {
-    height: 100%;
-    width: 100%;
+    width: auto;
     min-width: auto;
     max-width: none;
-    background-color: rgba(35, 35, 37, 0.7);
     border: none;
-    padding: 10px 10px;
+    padding: 15px;
   }
 }
 .home-project .project-cat {
