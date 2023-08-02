@@ -1680,6 +1680,11 @@ html[dir=ltr] .more-link .icon {
   background-size: cover;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .main-section {
+    background-attachment: unset;
+  }
+}
 
 .main-slider {
   padding: 150px 0 75px;
@@ -1702,6 +1707,11 @@ html[dir=ltr] .more-link .icon {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .about-section {
+    background-attachment: unset;
+  }
 }
 
 .about-cont {
@@ -1766,6 +1776,11 @@ html[dir=ltr] .more-link .icon {
 }
 @media (max-width: 767px) {
   .projects-section:after {
+    background-attachment: unset;
+  }
+}
+@media (max-width: 767px) {
+  .projects-section:after {
     height: 60%;
   }
 }
@@ -1805,6 +1820,11 @@ html[dir=ltr] .more-link .icon {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .clients-section {
+    background-attachment: unset;
+  }
 }
 
 .clients-cont {
@@ -1858,6 +1878,11 @@ html[dir=ltr] .more-link .icon {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .values-section {
+    background-attachment: unset;
+  }
 }
 
 .values-cont {
@@ -2133,6 +2158,11 @@ html[dir=ltr] .team-title::before {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .servicesSingle-main-section {
+    background-attachment: unset;
+  }
+}
 
 .servicesSingle-main-cont {
   padding: 60px 0 55px;
@@ -2344,6 +2374,11 @@ html[dir=ltr] .team-title::before {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 767px) {
+  .testimonials-section {
+    background-attachment: unset;
+  }
 }
 
 .testimonials-cont {
