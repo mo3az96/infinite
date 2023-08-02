@@ -3251,7 +3251,6 @@ html[dir=ltr] .side-share-card .share-method ~ .share-method {
 
 .gm-ui-hover-effect > span {
   background-color: #ffffff;
-  margin: 8px 2px !important;
 }
 
 .map-branch {
@@ -3261,13 +3260,6 @@ html[dir=ltr] .side-share-card .share-method ~ .share-method {
   padding: 5px;
   background-color: #232325;
   padding-inline-end: 0;
-}
-@media (max-width: 767px) {
-  .map-branch {
-    flex-direction: column;
-    padding: 5px;
-    width: 205px;
-  }
 }
 .map-branch .branch-img {
   width: 112px;
@@ -3282,18 +3274,12 @@ html[dir=ltr] .side-share-card .share-method ~ .share-method {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 767px) {
-  .map-branch .branch-img {
-    width: 100%;
-    height: auto;
-  }
-}
 .map-branch .branch-info {
   padding: 0 12px;
 }
 @media (max-width: 767px) {
   .map-branch .branch-info {
-    padding: 5px 0 0;
+    padding: 0 7px;
   }
 }
 .map-branch .branch-title {
@@ -3349,11 +3335,6 @@ html[dir=ltr] .side-share-card .share-method ~ .share-method {
   background-color: #171719;
   fill: #e8b591;
   transition: all 0.3s ease-in-out;
-}
-@media (max-width: 767px) {
-  .map-branch .branch-phone {
-    margin-inline-start: 5px;
-  }
 }
 .map-branch .branch-phone:hover {
   background-color: #e8b591;
