@@ -1721,6 +1721,11 @@ html[dir=ltr] .more-link .icon {
   background-size: cover;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .statistics-section {
+    background-attachment: unset;
+  }
+}
 
 .statistics-cont {
   padding: 85px 0;
@@ -2361,7 +2366,7 @@ html[dir=ltr] .team-title::before {
 .testimonial-item {
   position: relative;
   padding: 25px 30px 30px;
-  background-color: #1a1a1c;
+  background-color: #232325;
   display: flex;
   align-items: flex-start;
 }
@@ -2375,8 +2380,8 @@ html[dir=ltr] .team-title::before {
 .testimonial-item::after {
   content: "";
   position: absolute;
-  top: 6px;
-  bottom: 12px;
+  top: 10px;
+  bottom: 10px;
   inset-inline-end: 12px;
   width: 6px;
   background-color: #e8b591;
