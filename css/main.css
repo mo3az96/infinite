@@ -2054,12 +2054,20 @@ html[dir=ltr] .team-title::before {
   padding: 15px;
   border: 1px solid #3e3e3e;
   margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.team-member .member-img:hover {
+  border-color: #e8b591;
+}
+.team-member .member-img:hover img {
+  transform: scale(1.25);
 }
 .team-member .img-holder {
   position: relative;
   padding-top: 139.166666667%;
   display: block;
   width: 100%;
+  overflow: hidden;
 }
 .team-member .img-holder img {
   position: absolute;
@@ -2069,6 +2077,7 @@ html[dir=ltr] .team-title::before {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 .team-member .member-name {
   font-size: 24px;
