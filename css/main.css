@@ -80,6 +80,11 @@ html ::-webkit-scrollbar-thumb {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .inner-page .big-main-pattern:after {
+    background-attachment: unset;
+  }
+}
 .inner-page .big-main-pattern .main-pattern-content {
   position: relative;
   z-index: 2;
@@ -117,6 +122,7 @@ html ::-webkit-scrollbar-thumb {
 }
 @media (max-width: 767px) {
   .inner-page .small-main-pattern:after {
+    background-attachment: unset;
     height: 70px;
   }
 }
